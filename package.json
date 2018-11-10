@@ -1,0 +1,20 @@
+{
+  "name": "vuedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parcel": "parcel build vue/vuemain.js -d vue/static/vue/ --no-source-maps --out-file vuemain.min.js",
+    "vuedemo": "gulp --require babel-register --gulpfile node_tasks"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.0",
+    "parcel": "^1.10.3",
+    "vue": "^2.5.17"
+  }
+}

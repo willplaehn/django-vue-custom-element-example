@@ -1,6 +1,8 @@
 __pycache__/
 *.py[cod]
 db.sqlite3
+.cache
+node_modules
 
 # vim
 *.swp
