@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <script src="{% static "vue/vuemain.js" %}"></script>
+        {% if use_minified_vuejs %}
+            <script src="{% static "vue/vuemain.min.js" %}"></script>
+        {% else %}
+            <script src="{% static "vue/vuemain.js" %}"></script>
+        {% endif %}
     </head>
     <body>
         <h1>
