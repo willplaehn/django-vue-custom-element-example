@@ -13,6 +13,23 @@
             Hello, World!
         </h1>
         <vue-todo></vue-todo>
+        <div style="border: 1px solid black;">
+            Some legacy HTML and JS
+            <button id="legacy-button">
+                Remove the first todo
+            </button>
+        </div>
+        <script type="text/javascript">
+            // Manipulate a Vue component:
+            document.getElementById('legacy-button').addEventListener('click', function () {
+                document.querySelector('vue-todo').__vue_custom_element__.$children[0].removeTodo(0);
+            });
+
+            // Get messages from a Vue component:
+            document.addEventListener('my_event_name', function (e) {
+                alert('got message from vue-todo: ' + e.detail);
+            }, false);
+        </script>
     </body>
 </html>
 

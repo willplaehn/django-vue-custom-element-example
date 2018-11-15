@@ -26,6 +26,9 @@
         if (text) {
           this.todos.push({ text: text })
           this.newTodo = ''
+          var my_event = new Event('my_event_name');
+          my_event.detail = text;
+          document.dispatchEvent(my_event);
         }
       },
       removeTodo: function (index) {
