@@ -17,6 +17,11 @@ export function gulp_parcel(cb) {
     return runserver;
 };
 
+export function gulp_parcel_wrapped() {
+    // hack for gulp.watch to work
+    return gulp_parcel();
+}
+
 export function gulp_parcel_nomin(cb) {
     console.log("Starting Parcel bundler - no minify");
     var args = ["build", "vue/vuemain.js", "-d", "vue/static/vue/", "--out-file", "vuemain.js", "--no-source-maps", "--no-minify"];
@@ -32,3 +37,8 @@ export function gulp_parcel_nomin(cb) {
     });
     return runserver;
 };
+
+export function gulp_parcel_wrapped_nomin() {
+    // hack for gulp.watch to work
+    return gulp_parcel_nomin();
+}
